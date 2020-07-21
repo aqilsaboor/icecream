@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}
+Contact | ASK Icecream
+{% endblock title %}
+{% block body %}
+
+<div class="container">
+<h1>Contuct Us</h1>
+<form method="POST" action="/contact">
+{% csrf_token %}
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Name</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="enter your name">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Phone number</label>
+    <input type="text" class="form-control" id="number" name="number" placeholder="enter your phone number">
+  </div>
+   <div class="form-group">
+    <label for="exampleFormControlInput1">Email address</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+  </div>
+  
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">tell me about your self</label>
+    <textarea class="form-control" id="decr" name="decr" rows="3"> </textarea>
+  </div>
+  <button class="btn btn-primary" type="submint">Submint</button>
+
+</form>
+</div>
+{% endblock body %}
